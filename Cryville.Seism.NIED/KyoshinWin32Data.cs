@@ -641,17 +641,17 @@ namespace Cryville.Seism.NIED {
 				return (int)(b2 >> 7 == 0 ? ret : ret | 0xff000000);
 			}
 		}
-		public static unsafe ScaledNumber? ReadCoordinateBCD(this BinaryReader reader) {
-			byte* buffer = stackalloc byte[8];
-			ReadBCD(reader, new(buffer, 8));
+		public static ScaledNumber? ReadCoordinateBCD(this BinaryReader reader) {
+			Span<byte> buffer = stackalloc byte[8];
+			ReadBCD(reader, buffer);
 			if (buffer[0] == 0xb) return null;
 			int s = 3;
-			int n = ExtractBCD(new(buffer, 8), ref s);
+			int n = ExtractBCD(buffer, ref s);
 			return new(n, s);
 		}
-		public static unsafe ScaledNumber? ReadAltitudeBCD(this BinaryReader reader, int integralDigits) {
-			byte* buffer = stackalloc byte[8];
-			ReadBCD(reader, new(buffer, 8));
+		public static ScaledNumber? ReadAltitudeBCD(this BinaryReader reader, int integralDigits) {
+			Span<byte> buffer = stackalloc byte[8];
+			ReadBCD(reader, buffer);
 			int sign;
 			switch (buffer[0]) {
 				case 0xb: return null;
@@ -660,23 +660,23 @@ namespace Cryville.Seism.NIED {
 				default: throw new FormatException("Invalid altitude BCD.");
 			}
 			int s = integralDigits;
-			int n = ExtractBCD(new(buffer + 1, 7), ref s);
+			int n = ExtractBCD(buffer[1..], ref s);
 			return new(n * sign, s);
 		}
-		public static unsafe DateTime ReadTimeBCD(this BinaryReader reader) {
-			byte* buffer = stackalloc byte[16];
-			ReadBCD(reader, new(buffer, 16));
+		public static DateTime ReadTimeBCD(this BinaryReader reader) {
+			Span<byte> buffer = stackalloc byte[16];
+			ReadBCD(reader, buffer);
 			return new(
-				ExtractBCD(new(buffer, 4)), ExtractBCD(new(buffer + 4, 2)), ExtractBCD(new(buffer + 6, 2)),
-				ExtractBCD(new(buffer + 8, 2)), ExtractBCD(new(buffer + 10, 2)), ExtractBCD(new(buffer + 12, 2)), ExtractBCD(new(buffer + 14, 2))
+				ExtractBCD(buffer[0..4]), ExtractBCD(buffer[4..6]), ExtractBCD(buffer[6..8]),
+				ExtractBCD(buffer[8..10]), ExtractBCD(buffer[10..12]), ExtractBCD(buffer[12..14]), ExtractBCD(buffer[14..16])
 			);
 		}
-		public static unsafe ScaledNumber? ReadMagnitudeBCD(this BinaryReader reader) {
-			byte* buffer = stackalloc byte[2];
-			ReadBCD(reader, new(buffer, 2));
+		public static ScaledNumber? ReadMagnitudeBCD(this BinaryReader reader) {
+			Span<byte> buffer = stackalloc byte[2];
+			ReadBCD(reader, buffer);
 			if (buffer[0] == 0xb) return null;
 			int s = 1;
-			int n = ExtractBCD(new(buffer, 2), ref s);
+			int n = ExtractBCD(buffer, ref s);
 			return new(n, s);
 		}
 		static void ReadBCD(BinaryReader reader, Span<byte> digits) {
