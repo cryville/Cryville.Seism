@@ -104,10 +104,10 @@ namespace Cryville.Seism.UtilTool {
 						pathShindo.StartPoint = ps;
 					}
 
-					lpgmCalc.Update(ax * 100, ay * 100, az * 100);
+					lpgmCalc.Update(ax, ay, az);
 					svaDelayLine.Add(lpgmCalc.MaxSVA);
 					double maxSva = svaDelayLine.ComputedValue;
-					Point pv = new(x, height * (1 - maxSva / 200));
+					Point pv = new(x, height * (1 - maxSva / 2));
 					if (flag) {
 						pathSva.Segments.Add(new LineSegment(pv, true));
 					}
