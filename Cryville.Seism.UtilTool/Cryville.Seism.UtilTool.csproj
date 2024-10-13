@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+		<AnalysisLevel>latest-all</AnalysisLevel>
+		<Version>0.0.1</Version>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Cryville.Seism.NIED\Cryville.Seism.NIED.csproj" />
+		<ProjectReference Include="..\Cryville.Seism\Cryville.Seism.csproj" />
+	</ItemGroup>
+
+</Project>
