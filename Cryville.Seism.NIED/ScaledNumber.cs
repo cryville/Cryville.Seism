@@ -22,7 +22,10 @@ namespace Cryville.Seism.NIED {
 				return r;
 			}
 		}
-		/// <inheritdoc />
+		/// <summary>
+		/// Returns the string representation of the number.
+		/// </summary>
+		/// <returns>The string representation of the number.</returns>
 		public override readonly string ToString() => ToDouble().ToString($"G{SignificantDigits}", CultureInfo.CurrentCulture);
 		/// <summary>
 		/// Formats the value of the current instance using the specified format.
