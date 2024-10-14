@@ -6,7 +6,7 @@ namespace Cryville.Seism.NIED {
 	/// Represents a decimal number with the count of significant digits.
 	/// </summary>
 	/// <param name="Number">All the significant digits in the number.</param>
-	/// <param name="Scale">A scale 10^(-N) to applied to <paramref name="Number" />.</param>
+	/// <param name="Scale">A scale to applied to <paramref name="Number" />, where a value N indicates a scale of 10^N.</param>
 	public record struct ScaledNumber(int Number, int Scale) : IFormattable {
 		/// <summary>
 		/// The count of significant digits.
