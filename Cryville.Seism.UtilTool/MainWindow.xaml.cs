@@ -1,3 +1,4 @@
+using Cryville.Seism.Intensity;
 using Cryville.Seism.NIED;
 using Microsoft.Win32;
 using System;

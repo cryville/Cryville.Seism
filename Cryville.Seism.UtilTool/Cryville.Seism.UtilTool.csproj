@@ -11,8 +11,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Cryville.Seism.Intensity\Cryville.Seism.Intensity.csproj" />
 		<ProjectReference Include="..\Cryville.Seism.NIED\Cryville.Seism.NIED.csproj" />
-		<ProjectReference Include="..\Cryville.Seism\Cryville.Seism.csproj" />
 	</ItemGroup>
 
 </Project>

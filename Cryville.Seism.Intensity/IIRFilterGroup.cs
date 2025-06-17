@@ -1,4 +1,4 @@
-namespace Cryville.Seism {
+namespace Cryville.Seism.Intensity {
 	/// <summary>
 	/// Represents a 2-order filter group.
 	/// </summary>

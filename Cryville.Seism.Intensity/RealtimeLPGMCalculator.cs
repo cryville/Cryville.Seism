@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 
-namespace Cryville.Seism {
+namespace Cryville.Seism.Intensity {
 	/// <summary>
 	/// A calculator for calculating LPGM (long-period ground motion).
 	/// </summary>

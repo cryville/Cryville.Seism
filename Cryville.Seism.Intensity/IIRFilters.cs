@@ -1,6 +1,6 @@
 using System;
 
-namespace Cryville.Seism {
+namespace Cryville.Seism.Intensity {
 	/// <summary>
 	/// Provides methods that generate 2-order filter parameters to be used in <see cref="IIRFilterGroup{T}" />.
 	/// </summary>

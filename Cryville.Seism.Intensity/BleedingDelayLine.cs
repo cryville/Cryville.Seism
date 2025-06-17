@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Cryville.Seism {
+namespace Cryville.Seism.Intensity {
 	/// <summary>
 	/// Represents a delay line that computes a value so that the duration when the value is over the computed value is exactly the given bleeding duration.
 	/// </summary>

@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace Cryville.Seism {
+namespace Cryville.Seism.Intensity {
 	/// <summary>
 	/// Represents a series of operators on a specific vector type.
 	/// </summary>

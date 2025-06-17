@@ -1,6 +1,6 @@
 using System;
 
-namespace Cryville.Seism {
+namespace Cryville.Seism.Intensity {
 	/// <summary>
 	/// Represents a real-time filter for Shindo (JMA seismic intensity) calculation, applied on acceleration waveforms.
 	/// </summary>

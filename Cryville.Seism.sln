@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryville.Seism.UtilTool", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryville.Seism", "Cryville.Seism\Cryville.Seism.csproj", "{3CB3A3DA-D4A4-40F8-9AF4-2AEC8FE70A3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryville.Seism.Intensity", "Cryville.Seism.Intensity\Cryville.Seism.Intensity.csproj", "{8FDAB001-54BF-4F1E-863C-D23081CEB698}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{3CB3A3DA-D4A4-40F8-9AF4-2AEC8FE70A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CB3A3DA-D4A4-40F8-9AF4-2AEC8FE70A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CB3A3DA-D4A4-40F8-9AF4-2AEC8FE70A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FDAB001-54BF-4F1E-863C-D23081CEB698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FDAB001-54BF-4F1E-863C-D23081CEB698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FDAB001-54BF-4F1E-863C-D23081CEB698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FDAB001-54BF-4F1E-863C-D23081CEB698}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
