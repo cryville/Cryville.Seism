@@ -5,8 +5,19 @@
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
 		<AnalysisLevel>latest-all</AnalysisLevel>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Authors>Cryville</Authors>
+		<Copyright>Copyright (c) Cryville 2025</Copyright>
+		<Description>A seismology library.</Description>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://www.cryville.world/Projects/A017</PackageProjectUrl>
+		<PackageTags>seismology</PackageTags>
+		<RepositoryUrl>https://github.com/cryville/Cryville.Seism</RepositoryUrl>
 		<Version>0.0.1</Version>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 
 </Project>
